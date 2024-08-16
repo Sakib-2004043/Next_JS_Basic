@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 export default function ContactLayout({children}){
   
   const currentPath = usePathname();
-  console.log(currentPath)
+  // console.log(currentPath)
 
   return(
     <>
