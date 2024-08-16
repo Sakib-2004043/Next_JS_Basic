@@ -53,7 +53,12 @@ const EmployeeContact = () => {
       <ol>
         {employees.map((employee) => (
           <li key={employee.id}>
-            <Link href={`employee/${employee.name}`}>
+            <Link
+              href={{
+                pathname: `employee/${employee.id}`,
+                query: { data: JSON.stringify(employee) }
+              }}
+            >
               {employee.name}
             </Link>
           </li>
