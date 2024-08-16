@@ -4,7 +4,6 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <main className={styles.main}>
-      <h1>Next JS Basic</h1>
       <br/>
       <div className="list-div">
         <ol>
@@ -14,7 +13,7 @@ export default function Home() {
           <br/>
           <li><Link href="/contact">Contact</Link></li>
             <ul>
-              <li>Student</li>
+              <li><Link href="contact/student">Student</Link></li>
               <li><Link href="contact/employee">Employee</Link></li>
             </ul>
           <br/>
