@@ -1,0 +1,54 @@
+.button {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.button:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: scale(1.05);
+}
+
+.button:active {
+  transform: scale(0.98);
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 117, 252, 0.5);
+}
+.buttonNext {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #b4ec51, #429321); /* Greenish-yellow gradient */
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.buttonNext:hover {
+  background: linear-gradient(135deg, #429321, #b4ec51); /* Inverted gradient */
+  transform: scale(1.05);
+}
+
+.buttonNext:active {
+  transform: scale(0.98);
+  background: linear-gradient(135deg, #b4ec51, #429321); /* Original gradient */
+}
+
+.buttonNext:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(180, 236, 81, 0.5); /* Focus ring matching new color */
+}

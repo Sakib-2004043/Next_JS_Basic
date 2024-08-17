@@ -17,6 +17,12 @@ export default function Home() {
               <li><Link href="contact/employee">Employee</Link></li>
             </ul>
           <br/>
+          <li><Link href="/userList">Users List</Link></li>
+          <br/>
+          <li><Link href="/css">CSS</Link></li>
+          <br/>
+          <li><Link href="/post">Post Route</Link></li>
+          <br/>
           <li><Link href="/about">About</Link></li>
           <br/>
         </ol>
