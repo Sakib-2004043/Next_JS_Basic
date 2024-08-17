@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <div>
       <ul>
-      <li><Link href={"contact/employee"}>Employee</Link></li>
+      <li><Link href={"contact/employee"}>Employee (SSG)</Link></li>
       <br />
       <li><Link href={"contact/student"}>Student</Link></li>
       </ul>
