@@ -31,6 +31,8 @@ export default function Home() {
           <br/>
           <li><Link href="/post">Post Route</Link></li>
           <br/>
+          <li><Link href="/loading">Loading Annimation</Link></li>
+          <br/>
           <li><Link href="/about">About</Link></li>
           <br/>
         </ol>
