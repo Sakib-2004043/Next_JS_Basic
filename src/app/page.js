@@ -21,6 +21,14 @@ export default function Home() {
           <br/>
           <li><Link href="/css">CSS</Link></li>
           <br/>
+          <li><Link href="/image">Image Optimization</Link></li>
+          <br/>
+          <li><Link href="/metadata">Dynamic Metadata</Link></li>
+          <br/>
+          <li><Link href="/script">Script Component</Link></li>
+          <br/>
+          <li><Link href="/font">Font Optimization</Link></li>
+          <br/>
           <li><Link href="/post">Post Route</Link></li>
           <br/>
           <li><Link href="/about">About</Link></li>

@@ -1,0 +1,1 @@
+console.log("This is Java Scripts From Public Folder.")
