@@ -137,7 +137,7 @@ const StudentContact = () => {
         </div>
         <br />
         <div>
-          <label>Email: </label>
+          <label>Email:. </label>
           <input
             type="email"
             value={email}

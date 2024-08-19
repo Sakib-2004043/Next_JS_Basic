@@ -31,6 +31,8 @@ export default function Home() {
           <br/>
           <li><Link href="/post">Post Route</Link></li>
           <br/>
+          <li><Link href="/upload">Upload Files</Link></li>
+          <br/>
           <li><Link href="/ssg">Static Site Generation</Link></li>
           <br/>
           <li><Link href="/loading">Loading Annimation</Link></li>
