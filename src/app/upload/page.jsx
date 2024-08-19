@@ -42,7 +42,6 @@ const UploadFiles = () => {
     try {
       const response = await fetch("/api/file");
       const result = await response.json();
-      console.log(result.file)
       setFiles(result.file)
     } catch (error) {
       console.log(error)
