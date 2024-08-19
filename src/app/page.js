@@ -7,37 +7,37 @@ export default function Home() {
       <br/>
       <div className="list-div">
         <ol>
-          <li><Link href="/home">Home</Link></li>
+          <li><Link href="/home">Home (home)</Link></li>
           <br/>
-          <li><Link href="/components">components</Link></li>
+          <li><Link href="/components">components (components)</Link></li>
           <br/>
-          <li><Link href="/contact">Contact</Link></li>
+          <li><Link href="/contact">Contact (contact)</Link></li>
             <ul>
-              <li><Link href="contact/student">Student (DB)</Link></li>
-              <li><Link href="contact/employee">Employee</Link></li>
+              <li><Link href="contact/student">Student (DB) (contact/student)</Link></li>
+              <li><Link href="contact/employee">Employee (contact/employee)</Link></li>
             </ul>
           <br/>
-          <li><Link href="/userList">Users List</Link></li>
+          <li><Link href="/userList">Users List (useList)</Link></li>
           <br/>
-          <li><Link href="/css">CSS</Link></li>
+          <li><Link href="/css">CSS (css)</Link></li>
           <br/>
-          <li><Link href="/image">Image Optimization</Link></li>
+          <li><Link href="/image">Image Optimization (image)</Link></li>
           <br/>
-          <li><Link href="/metadata">Dynamic Metadata</Link></li>
+          <li><Link href="/metadata">Dynamic Metadata (metadata)</Link></li>
           <br/>
-          <li><Link href="/script">Script Component</Link></li>
+          <li><Link href="/script">Script Component (script)</Link></li>
           <br/>
-          <li><Link href="/font">Font Optimization</Link></li>
+          <li><Link href="/font">Font Optimization (font)</Link></li>
           <br/>
-          <li><Link href="/post">Post Route</Link></li>
+          <li><Link href="/post">Post Route (post)</Link></li>
           <br/>
-          <li><Link href="/upload">Upload Files</Link></li>
+          <li><Link href="/upload">Upload Files (upload)</Link></li>
           <br/>
-          <li><Link href="/ssg">Static Site Generation</Link></li>
+          <li><Link href="/ssg">Static Site Generation (ssg)</Link></li>
           <br/>
-          <li><Link href="/loading">Loading Annimation</Link></li>
+          <li><Link href="/loading">Loading Annimation (loading)</Link></li>
           <br/>
-          <li><Link href="/about">About</Link></li>
+          <li><Link href="/about">About (about) // Blocked By Middleware</Link></li>
           <br/>
         </ol>
       </div>
