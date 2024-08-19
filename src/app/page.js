@@ -13,7 +13,7 @@ export default function Home() {
           <br/>
           <li><Link href="/contact">Contact</Link></li>
             <ul>
-              <li><Link href="contact/student">Student</Link></li>
+              <li><Link href="contact/student">Student (DB)</Link></li>
               <li><Link href="contact/employee">Employee</Link></li>
             </ul>
           <br/>
