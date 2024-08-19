@@ -1,6 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 
+const routeURL = "http://localhost:3000/api/student"
+
 const StudentContact = () => {
   const [students, setStudents] = useState([]);
   const [name, setName] = useState(""); 
@@ -11,7 +13,7 @@ const StudentContact = () => {
   useEffect(() => {
     const getStudents = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api");
+        const response = await fetch(routeURL);
         const result = await response.json();
         if (result.success) {
           setStudents(result.data || []);
@@ -36,45 +38,52 @@ const StudentContact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault(); 
+
+    let _id = "Hi";
+    if(selectedIndex !== null){
+      _id =students[selectedIndex]._id
+    }
+  
     try {
-      const response = await fetch("http://localhost:3000/api", {
-        method: "POST",
+      const response = await fetch(routeURL, {
+        method: selectedIndex !== null ? "PUT" : "POST", // Use "PUT" for updating and "POST" for adding
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ name, age, email }) 
+        body: JSON.stringify(selectedIndex !== null ?{ _id , name, age, email }:{ name, age, email }) 
       });
-
+  
       const result = await response.json();
       if (result.success) {
         if (selectedIndex !== null) {
+          // Update the student in the array
           const updatedStudents = [...students];
-          updatedStudents[selectedIndex] = result.data;
+          updatedStudents[selectedIndex] = { ...result.data, _id: students[selectedIndex]._id }; // Ensure _id remains unchanged
           setStudents(updatedStudents);
-        } else {
+        } 
+        else {
+          // Add the new student to the array
           setStudents([...students, result.data]); 
         }
+        
+        // Clear the form fields after submission
         setName(""); 
         setAge("");
         setEmail("");
-        setSelectedIndex(null); // Reset after submission
+        setSelectedIndex(null); // Reset selectedIndex after submission
       } else {
-        console.error("Failed to add student:", result.error);
+        console.error("Failed to save student:", result.error);
       }
     } catch (error) {
-      console.error("Error adding student:", error);
+      console.error("Error saving student:", error);
     }
   };
-
+  
   const handleDelete = async (e, index) => {
-    // setName(""); 
-    // setAge("");
-    // setEmail("");
     e.preventDefault();
-    setSelectedIndex(null)
     try {
       const deleteId = students[index]._id;
-      const response = await fetch(`http://localhost:3000/api`, {
+      const response = await fetch(routeURL, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -91,10 +100,12 @@ const StudentContact = () => {
           setEmail("");
           setSelectedIndex(null);
         }
-      } else {
+      } 
+      else {
         console.error("Failed to delete student:", result.error);
       }
-    } catch (error) {
+    } 
+    catch (error) {
       console.error("Error deleting student:", error);
     }
   };
@@ -126,7 +137,7 @@ const StudentContact = () => {
         </div>
         <br />
         <div>
-          <label>Email:. </label>
+          <label>Email: </label>
           <input
             type="email"
             value={email}

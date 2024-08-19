@@ -54,3 +54,31 @@ export const DELETE = async (req) => {
     return NextResponse.json({ success: false, error: "Failed to delete student" });
   }
 };
+
+export const PUT = async (req) => {
+  try {
+    await connectDB();
+    const body = await req.json();
+
+    // Find the student by ID and update with new data
+    const updatedStudent = await studentTable.findByIdAndUpdate(
+      body._id, 
+      {
+        name: body.name,
+        age: body.age,
+        email: body.email,
+      },
+      { new: true } // Return the updated document
+    );
+
+    if (!updatedStudent) {
+      return NextResponse.json({ success: false, error: "Student not found" });
+    }
+
+    return NextResponse.json({ data: updatedStudent, success: true });
+  } catch (error) {
+    console.error("Error in updating student:", error);
+    return NextResponse.json({ success: false, error: "Failed to update student" });
+  }
+};
+

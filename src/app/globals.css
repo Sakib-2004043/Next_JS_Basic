@@ -1,3 +1,29 @@
 body{
   margin-left: 30px;
 }
+button {
+  background-color: #d38b6f; /* Pinkish-brown mix */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+button:hover {
+  background-color: #c5785b; /* Slightly darker on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+button:active {
+  background-color: #b96851; /* Even darker when clicked */
+  transform: translateY(0); /* Reset lift on click */
+}
+
+button:disabled {
+  background-color: #e0b7a6; /* Light color for disabled state */
+  cursor: not-allowed; /* Not-allowed cursor for disabled state */
+  opacity: 0.6; /* Slight transparency for disabled state */
+}
